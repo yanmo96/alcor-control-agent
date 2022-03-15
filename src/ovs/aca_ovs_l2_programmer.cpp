@@ -268,13 +268,13 @@ int ACA_OVS_L2_Programmer::setup_ovs_controller(const std::string ctrler_ip, con
   // set bridge controller will clean up flows
   auto ovsdb_client_start = chrono::steady_clock::now();
   string br_int_cmd_string = "ovs-vsctl " + setup_br_int_cmd;
-  rc = aca_net_config::Aca_Net_Config::get_instance().execute_system_command(br_int_cmd_string);
+  // rc = aca_net_config::Aca_Net_Config::get_instance().execute_system_command(br_int_cmd_string);
   if (rc != EXIT_SUCCESS) {
     ACA_LOG_ERROR("ACA_OVS_L2_Programmer::setup_ovs_controller - failed to set br-int controller\n");
   }
 
   string br_tun_cmd_string = "ovs-vsctl " + setup_br_tun_cmd;
-  rc = aca_net_config::Aca_Net_Config::get_instance().execute_system_command(br_tun_cmd_string);
+  // rc = aca_net_config::Aca_Net_Config::get_instance().execute_system_command(br_tun_cmd_string);
   if (rc != EXIT_SUCCESS) {
     ACA_LOG_ERROR("ACA_OVS_L2_Programmer::setup_ovs_controller - failed to set br-tun controller\n");
   }
