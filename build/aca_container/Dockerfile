@@ -6,7 +6,7 @@ RUN apt install -y git
 RUN apt install -y wget
 RUN apt install -y uuid
 RUN apt-get install -y uuid-dev
-RUN apt install -y openvswitch-switch
+RUN apt install -y openvswitch-switch=2.9.8
 RUN /etc/init.d/openvswitch-switch restart
 
 # RUN git clone --recurse-submodules https://github.com/futurewei-cloud/alcor-control-agent.git /root/alcor-control-agent
