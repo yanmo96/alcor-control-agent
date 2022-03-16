@@ -461,7 +461,7 @@ int ACA_OVS_L2_Programmer::create_port(const string vpc_id, const string port_na
     // created by nova compute agent running on the compute host
 
     // just need to set the vlan tag on the ovs port, the ovs port may be not created by nova yet
-    string cmd_string = "set port " + port_name + " tag=" + to_string(internal_vlan_id);
+    // string cmd_string = "set port " + port_name + " tag=" + to_string(internal_vlan_id);
 
     execute_ovsdb_command(cmd_string, culminative_time, overall_rc);
 
