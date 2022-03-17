@@ -15,3 +15,5 @@ RUN git clone --recurse-submodules -b aca_container https://github.com/yanmo96/a
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
 RUN /root/alcor-control-agent/build/aca-machine-init.sh
+
+CMD while [ 1 ]; do date "+%T"; sleep 60; done
