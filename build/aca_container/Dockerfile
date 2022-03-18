@@ -16,4 +16,4 @@ ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 
 RUN /root/alcor-control-agent/build/aca-machine-init.sh
 
-CMD . /root/alcor-control-agent/build/aca_container/aca_run.sh
+CMD nohup . /root/alcor-control-agent/build/aca_container/aca_run.sh > /dev/null 2>&1 &
